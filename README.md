@@ -26,7 +26,7 @@ Add `zplug "guillaumeboehm/zsh-copybuffer"` to your `~/.zshrc`.
 
         git clone https://github.com/guillaumeboehm/zsh-copybuffer ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-copybuffer
 
-* Enable it in your `.zshrc` by adding it to your plugin list and reloading the completion:
+* Enable it in your `.zshrc` by adding it to your plugin list:
 
         plugins=(… zsh-copybuffer)
 
@@ -38,4 +38,4 @@ Add `zplug "guillaumeboehm/zsh-copybuffer"` to your `~/.zshrc`.
 
 * Source the plugin in your `~/.zshrc`
 
-        `source /path/to/zsh-copybuffer`
+        `source /path/to/zsh-copybuffer/zsh-copybuffer.plugin.zsh`
