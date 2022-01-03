@@ -28,8 +28,7 @@ Add `zplug "guillaumeboehm/zsh-copybuffer"` to your `~/.zshrc`.
 
 * Enable it in your `.zshrc` by adding it to your plugin list and reloading the completion:
 
-        plugins=(… zsh-completions)
-        autoload -U compinit && compinit
+        plugins=(… zsh-copybuffer)
 
 ### Manual installation
 
