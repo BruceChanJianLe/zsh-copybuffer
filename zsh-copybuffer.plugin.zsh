@@ -15,7 +15,7 @@ fi
 case $os in
   LINUX)
     if which xclip &>/dev/null; then
-      copycmd="xclip -r -sel clip"
+      copycmd="xclip -sel clip"
     elif which xsel &>/dev/null; then
       copycmd="xsel -ib"
     elif which clipcopy &>/dev/null; then
