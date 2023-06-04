@@ -52,6 +52,7 @@ copybuffer () {
 
 zle -N copybuffer
 
-bindkey -M emacs "^O" copybuffer
-bindkey -M viins "^O" copybuffer
-bindkey -M vicmd "^O" copybuffer
+bindkey -M emacs "^g" copybuffer
+bindkey -M viins "^g" copybuffer
+bindkey -M vicmd "^g" copybuffer
+bindkey '^g' copybuffer
