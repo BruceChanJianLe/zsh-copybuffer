@@ -14,14 +14,20 @@ fi
 
 case $os in
   LINUX)
-    if which xclip &>/dev/null; then
-      copycmd="xclip -sel clip"
-    elif which xsel &>/dev/null; then
-      copycmd="xsel -ib"
-    elif which clipcopy &>/dev/null; then
-      copycmd="clipcopy"
-    elif which wl-copy &>/dev/null; then
+    if [ -n "$WAYLAND_DISPLAY" ]; then
       copycmd="wl-copy"
+    elif [ -n "$DISPLAY" ]; then
+      if which xclip &>/dev/null; then
+        copycmd="xclip -sel clip"
+      elif which xsel &>/dev/null; then
+        copycmd="xsel -ib"
+      elif which clipcopy &>/dev/null; then
+        copycmd="clipcopy"
+      elif which wl-copy &>/dev/null; then
+        copycmd="wl-copy"
+      fi
+    else
+      echo "No display detected"
     fi;;
   MAC)
     if which pbcopy &>/dev/null; then
